@@ -5,12 +5,15 @@ jobs:
     runs-on: ubuntu-latest 
     steps:
       - name: gettine my code first
-        uses: action/checkout@v6
+        uses: actions/checkout@v6
+
       - name: installing node
-        uses: action/setup-node@v6
+        uses: actions/setup-node@v6 
         with:
           node-version: 'v24.11.1'
+
       - name: installing dependencies
         run: npm install
+
       - name: testing app
         run: npm test
