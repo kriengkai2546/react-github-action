@@ -17,3 +17,20 @@ jobs:
 
       - name: testing app
         run: npm test
+  
+  build:
+    runs-on: ubuntu-latest 
+    steps:
+      - name: gettine my code first
+        uses: actions/checkout@v6
+
+      - name: installing node
+        uses: actions/setup-node@v6 
+        with:
+          node-version: 'v24.11.1'
+
+      - name: installing dependencies
+        run: npm install
+
+      - name: start my app
+        run: npm start
