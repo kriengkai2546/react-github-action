@@ -6,7 +6,7 @@ on:
     branches: 
       - main
     paths:
-      - '*.tsx'
+      - 'App.tsx'
 jobs:
   test:
     runs-on: ubuntu-latest 
